@@ -6,7 +6,9 @@ def pad(text):
     return text + (b' ' * n)
 
 
-key = b'hello123'
+key = input("Enter your favor key : ")
+key = key.encode()
+
 text1 = b'Python is the Best Language!'
 
 des = DES.new(key, DES.MODE_ECB)
@@ -16,3 +18,4 @@ encrypted_text = des.encrypt(padded_text)
 
 print(encrypted_text)
 print(des.decrypt(encrypted_text))
+#%%
